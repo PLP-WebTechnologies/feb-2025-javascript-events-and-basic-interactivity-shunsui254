@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero Battle System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Superhero Battle System</h1>
+    </header>
+
+    <main>
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="battle">Battle Arena</button>
+            <button class="tab-btn" data-tab="register">Register Hero</button>
+            <button class="tab-btn" data-tab="gallery">Hero Gallery</button>
+        </div>
+
+        <div id="battleTab" class="tab-content active">
+            <section class="content-section">
+                <h2>Hero Selection</h2>
+                <div id="heroStats" class="hero-box">
+                    Waiting for hero selection...
+                </div>
+                <button class="action-btn" id="selectHeroBtn">Choose Hero</button>
+            </section>
+
+            <section class="content-section">
+                <h2>Battle Arena</h2>
+                <div id="battleZone" class="hero-box">
+                    Battle status will appear here
+                </div>
+                <button class="action-btn" id="attackBtn">Attack!</button>
+            </section>
+
+            <section class="content-section">
+                <h2>Battle Log</h2>
+                <div id="battleLog"></div>
+                <button class="action-btn" id="clearLogBtn">Clear Log</button>
+            </section>
+        </div>
+
+        <div id="registerTab" class="tab-content">
+            <section class="content-section">
+                <h2>Register New Hero</h2>
+                <form id="heroForm">
+                    <div class="form-group">
+                        <input type="text" id="heroName" required placeholder="Hero Name">
+                        <span class="validation-msg"></span>
+                    </div>
+                    <button type="submit" class="action-btn">Register Hero</button>
+                </form>
+            </section>
+        </div>
+
+        <div id="galleryTab" class="tab-content">
+            <section class="content-section">
+                <h2>Hero Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="images/hero1.jpg" alt="Superman" class="gallery-img">
+                        <div class="hero-name">Superman</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/hero2.jpg" alt="Batman" class="gallery-img">
+                        <div class="hero-name">Batman</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/hero3.jpg" alt="Wonder Woman" class="gallery-img">
+                        <div class="hero-name">Wonder Woman</div>
+                    </div>
+                </div>
+                <div class="gallery-nav">
+                    <button class="action-btn" id="prevBtn">Previous</button>
+                    <button class="action-btn" id="nextBtn">Next</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Superhero Battle System by Cecil Bezalel</p>
+    </footer>
+</body>
+</html>
